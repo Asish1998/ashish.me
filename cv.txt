@@ -1,0 +1,110 @@
+A S H I S H  K H A N A L  
+Senior Software Engineer |  Solution Lead   
+brkhanal17@gmail.com   •   +977 9860196101   •   Kathmandu, Nepal    •   LinkedIn: linkedin.com/in/aacesh 
+ 
+P R O F E S S I O N A L  S U M M A R Y  
+ 
+Results-driven Senior Software Engineer and Solution Lead with 5+ years of hands-on experience architecting 
+and delivering enterprise Salesforce products used by global customers. Proven track record of leading cross-
+functional teams, driving end-to-end feature delivery, and mentoring engineers to grow high-performing teams. 
+Deep expertise in Apex, Lightning Web Components, RESTful API integrations, and cloud-native system design. 
+Equally comfortable in individual contributor (IC) and people leadership roles, and actively seeking a Lead 
+Engineer or Engineering Manager position where I can scale impact, drive technical strategy, and cultivate 
+engineering excellence. 
+ 
+K E Y  A C H I E V E M E N T S  &  I M P A C T  
+ 
+• Led architecture and delivery of 5+ major product features across multiple global enterprise customer 
+deployments, contributing directly to product revenue growth. 
+• Reduced sprint cycle time by streamlining task breakdown, estimation, and developer coordination, 
+increasing team throughput by an estimated 20–30%. 
+• Mentored and provide sessions for junior engineers, accelerating their ramp-up time and establishing coding 
+standards adopted team-wide. 
+• Actively participated as interviewer role while hiring interns and freshers for company. 
+• Designed and delivered robust REST API integrations connecting Salesforce with external enterprise 
+systems, reducing manual data handling across client workflows. 
+• Championed CI/CD best practices and unit testing culture, resulting in significantly fewer production incidents 
+across delivered features. 
+• Built internal tooling (PDF diff generator, Scratch Org creator) that automated manual release comparison 
+processes, saving multiple hours per release cycle. 
+ 
+W O R K  E X P E R I E N C E  
+ 
+Senior Software Engineer | Solution Lead  |  ComplianceQuest-Nepal 
+January 2020 – 2026 
+• Architected and led development of multiple high-impact enterprise product features across Salesforce 
+platform, serving a global B2B customer base. 
+• Owned full feature lifecycle: from requirement analysis and system design through development, QA 
+collaboration, deployment, and production support. 
+• Led sprint planning, backlog grooming, task estimation, and cross-team dependency management in an 
+Agile/Scrum environment. 
+• Designed and implemented RESTful API integrations between Salesforce and third-party enterprise 
+systems, ensuring data integrity and high availability. 
+• Conducted systematic code reviews, established coding standards, and drove adoption of unit testing and 
+CI/CD pipelines to maintain code quality. 
+• Mentored junior developers through structured onboarding, pair programming, and technical guidance on 
+project architecture and best practices. 
+
+• Collaborated directly with product managers, QA leads, and global stakeholders to translate business 
+requirements into scalable technical solutions. 
+• Contributed to critical system architecture decisions to ensure scalability, maintainability, and cloud-native 
+design principles. 
+Software Engineering Intern  |  Ambarkaar Software Pvt. Ltd. 
+June 2019 – August 2019 
+• Designed and developed an internal PDF diff generator comparing software release versions, streamlining 
+release documentation workflows. 
+• Built a functional Scratch Org creator prototype using Node.js and JavaScript, automating Salesforce org 
+setup and reducing manual configuration time. 
+ 
+T E C H N I C A L  S K I L L S  
+ 
+Languages 
+Apex, Java, JavaScript, HTML5, CSS,React 
+Salesforce Stack 
+Lightning Web Components (LWC), Apex Triggers, Flows, SOQL, REST APIs, 
+Aura, Salesforce DX 
+Integration 
+RESTful APIs, JSON/XML, External System Integrations, 
+Architecture 
+Cloud-Native Design, MVC, Event-Driven Patterns, API-First Design, Scalability 
+Principles 
+Dev Tools 
+Git, VS Code, Postman, Jira, Salesforce CLI, Node.js 
+Methodologies 
+Agile (Scrum), CI/CD, TDD, Code Review Practices, Sprint Planning & 
+Estimation 
+Leadership 
+Technical Mentoring, Onboarding, Cross-functional Collaboration, Stakeholder 
+Communication 
+ 
+E D U C A T I O N  
+ 
+Qualification 
+Institution 
+Year 
+Grade 
+Bachelor of Computer Engineering 
+Tribhuvan University 
+2015–
+2019 
+70.91% 
+High School (Science) 
+NIST 
+2014–
+2015 
+71.40% 
+School (SLC) 
+Kumudini Homes Higher 
+Secondary School 
+Until 2013 
+83.50% 
+ 
+C E R T I F I C A T I O N S  &  P R O F E S S I O N A L  D E V E L O P M E N T  
+ 
+• Java Certification 
+ 
+L A N G U A G E S  
+ 
+English — Fluent (Professional) 
+Nepali — Native 
+Hindi — Conversational 
