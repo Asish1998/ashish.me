@@ -19,15 +19,23 @@ export default function Home() {
       <main className={styles.container}>
         {/* HERO SECTION */}
         <section id="about" className={styles.hero}>
-          <p className={`${styles.greeting} animate-fade-in`}>Hi, my name is</p>
-          <h1 className={`${styles.title} animate-fade-in delay-1`}>Ashish Khanal.</h1>
-          <h2 className={`${styles.subtitle} animate-fade-in delay-2`}>Senior Software Engineer & Solution Lead.</h2>
-          <p className={`${styles.description} animate-fade-in delay-3`}>
-            I'm a results-driven engineer with over 5 years of experience architecting and delivering enterprise Salesforce products used globally. I specialize in Apex, Lightning Web Components, RESTful API integrations, and cloud-native system design.
-          </p>
-          <div className={`${styles.ctaGroup} animate-fade-in delay-3`}>
-            <a href="#experience" className={styles.primaryBtn}>View Experience</a>
-            <a href="#contact" className={styles.secondaryBtn}>Get In Touch</a>
+          <div className={styles.heroContent}>
+            <p className={`${styles.greeting} animate-fade-in`}></p>
+            <h1 className={`${styles.title} animate-fade-in delay-1`}>Ashish Khanal.</h1>
+            <h2 className={`${styles.subtitle} animate-fade-in delay-2`}>Senior Software Engineer & Solution Lead.</h2>
+            <p className={`${styles.description} animate-fade-in delay-3`}>
+              I'm a results-driven engineer with over 5 years of experience architecting and delivering enterprise Salesforce products used globally. I specialize in Apex, Lightning Web Components, RESTful API integrations, and cloud-native system design.
+            </p>
+            <div className={`${styles.ctaGroup} animate-fade-in delay-3`}>
+              <a href="#experience" className={styles.primaryBtn}>View Experience</a>
+              <a href="#contact" className={styles.secondaryBtn}>Get In Touch</a>
+            </div>
+          </div>
+
+          <div className={`${styles.heroImageWrapper} animate-fade-in delay-2`}>
+            <div className={styles.heroImageContainer}>
+              <img src="/backgroundak.jpg" alt="Ashish Khanal" className={styles.heroImage} />
+            </div>
           </div>
         </section>
 
