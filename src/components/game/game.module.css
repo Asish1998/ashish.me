@@ -1,0 +1,418 @@
+.gameCard {
+  flex: 1;
+  background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+  border: 1px solid #3f3f5a;
+  border-radius: 40px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 300px;
+}
+
+.gameCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 60px -15px rgba(118, 75, 162, 0.4);
+  border-color: rgba(118, 75, 162, 0.5);
+}
+
+.glowEffect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(236,72,153,0.3) 0%, rgba(0,0,0,0) 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.gameCard:hover .glowEffect {
+  opacity: 1;
+}
+
+.logoContainer {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+.secretText {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+.playBtn {
+  background: #ec4899;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 8px 20px -5px rgba(236,72,153,0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.playBtn:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -5px rgba(236,72,153,0.6);
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 15, 25, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameWindow {
+  width: 100%;
+  max-width: 800px;
+  height: 90vh;
+  max-height: 900px;
+  background: #11111a;
+  border: 2px solid #2a2a40;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 50px rgba(236,72,153,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.gameHeader {
+  height: 60px;
+  background: #1a1a2e;
+  border-bottom: 1px solid #2a2a40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  color: #ef4444;
+}
+
+.inputField {
+  background: #1e1e2f;
+  border: 2px solid #3f3f5a;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #ec4899;
+}
+
+.startBtn {
+  background: var(--accent-gradient, linear-gradient(to right, #ec4899, #8b5cf6));
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.startBtn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(236,72,153,0.5);
+}
+
+.logoTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Category Chips */
+.categoryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.categoryChip {
+  background: #1e1e2f;
+  border: 2px solid #3f3f5a;
+  color: #a1a1aa;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categoryChip:hover {
+  border-color: #8b5cf6;
+  color: white;
+}
+
+.categoryChip.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: #8b5cf6;
+  color: white;
+}
+
+/* Player Form Setup Grid */
+.setupGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+  max-height: 40vh;
+  padding: 0.5rem;
+}
+
+/* 3D Card Flip styles */
+.flipContainer {
+  perspective: 1000px;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.front {
+  background: #1e1e2f;
+  border: 2px solid #3f3f5a;
+  color: white;
+}
+
+.front:hover {
+  border-color: #ec4899;
+  box-shadow: 0 0 20px rgba(236,72,153,0.3);
+}
+
+.back {
+  background: #11111a;
+  border: 2px solid #3b82f6;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.back.imposter {
+  border-color: #ef4444;
+  box-shadow: 0 0 40px rgba(239,68,68,0.2);
+}
+
+/* Timer Circle */
+.timerCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #3f3f5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.timerCircle.urgent {
+  color: #ef4444;
+  border-color: #ef4444;
+  animation: pulse 1s infinite;
+}
+
+/* Voting Grid */
+.votingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.voteCard {
+  background: #1e1e2f;
+  border: 2px solid #3f3f5a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voteCard:hover {
+  background: rgba(236,72,153,0.1);
+  border-color: #ec4899;
+}
+
+.voteCard.selected {
+  background: rgba(236,72,153,0.2);
+  border-color: #ec4899;
+  transform: scale(1.05);
+}
+
+.scoreBoard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  background: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #3f3f5a;
+  margin-bottom: 2rem;
+}
+
+.scoreRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .gameWindow {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .gameHeader {
+    padding: 0 1rem;
+  }
+
+  .logoTitle {
+    font-size: 2rem;
+  }
+
+  .flipContainer {
+    width: 250px;
+    height: 350px;
+  }
+
+  .timerCircle {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+
+  .categoryChip {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .setupGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inputField {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .startBtn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .votingGrid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}

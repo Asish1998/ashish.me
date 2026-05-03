@@ -1,4 +1,6 @@
 import styles from './page.module.css';
+import GameCard from '../components/game/GameCard';
+
 
 export default function Home() {
   return (
@@ -159,15 +161,20 @@ export default function Home() {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
-          <h2 className={styles.sectionTitle} style={{ justifyContent: 'center' }}>Get In Touch</h2>
-          <p>
-            Whether you have a question, want to collaborate, or just want to chat about architecture, my inbox is always open.
-          </p>
-          <a href="mailto:brkhanal17@gmail.com" className={styles.primaryBtn}>Say Hello</a>
-          <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center' }}>
-            <a href="https://linkedin.com/in/aacesh" target="_blank" rel="noreferrer" className={styles.secondaryBtn}>LinkedIn Profile</a>
-            <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace' }}>+977 9860196101</span>
+        <section id="contact" className={styles.section}>
+          <div className={styles.contactWrapper}>
+            <div className={styles.contactSection}>
+              <h2 className={styles.sectionTitle} style={{ justifyContent: 'center' }}>Get In Touch</h2>
+              <p>
+                Whether you have a question, want to collaborate, or just want to chat about architecture, my inbox is always open.
+              </p>
+              <a href="mailto:brkhanal17@gmail.com" className={styles.primaryBtn}>Say Hello</a>
+              <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center' }}>
+                <a href="https://linkedin.com/in/aacesh" target="_blank" rel="noreferrer" className={styles.secondaryBtn}>LinkedIn Profile</a>
+                <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace' }}>+977 9860196101</span>
+              </div>
+            </div>
+            <GameCard />
           </div>
         </section>
       </main>

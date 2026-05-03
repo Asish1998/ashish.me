@@ -417,15 +417,31 @@
   border-radius: 20px;
 }
 
-.contactSection {
-  text-align: center;
-  max-width: 700px;
+.contactWrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .contactWrapper {
+    flex-direction: column;
+  }
+}
+
+.contactSection {
+  flex: 1;
+  text-align: center;
   background: var(--card-bg);
   padding: 4rem!important;
   border-radius: 40px;
   box-shadow: 0 20px 50px -10px rgba(0,0,0,0.05);
   border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contactSection p {
@@ -433,6 +449,12 @@
   margin-bottom: 3rem;
   font-size: 1.3rem;
   line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 2rem!important;
+  }
 }
 
 .footer {
@@ -477,4 +499,106 @@
 
 .galleryItem:hover .galleryImage {
   transform: scale(1.1);
+}
+
+.momoAdSection {
+  padding: 6rem 0;
+}
+
+.momoAdCard {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(239, 68, 68, 0.1);
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .momoAdCard {
+    flex-direction: column;
+  }
+}
+
+.momoAdContent {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adBadge {
+  background: #ef4444;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  width: max-content;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.adTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adDescription {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.adMotos {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.adMotos span {
+  font-weight: 600;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.momoBtn {
+  background: #ef4444;
+  color: white;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: max-content;
+  box-shadow: 0 15px 30px -10px rgba(239, 68, 68, 0.4);
+  transition: all 0.3s ease;
+}
+
+.momoBtn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 25px 40px -12px rgba(239, 68, 68, 0.5);
+  background: #dc2626;
+}
+
+.momoAdImageWrapper {
+  flex: 1;
+  min-height: 400px;
+}
+
+.momoAdImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
